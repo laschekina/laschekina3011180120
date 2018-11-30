@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    details reservation
+{% endblock %}
+
+{% block body %}
+   {{ form_start(formReservEdit) }}
+   {{ form_label(formReservEdit.debutPrestation, 'Debut prestation', {'label_attr': {'class': 'debutprestation'}}) }}
+   {{ form_widget(formReservEdit.debutPrestation) }}
+   {{ form_label(formReservEdit.finPrestation, 'Fin prestation', {'label_attr': {'class': 'finprestation'}}) }}
+   {{ form_widget(formReservEdit.finPrestation) }}
+
+   <div class="row">
+     <div class="col-lg-3">
+       {{ form_label(formReservEdit.adresseReserve, 'Adresse de la reservation', {'label_attr': {'class': 'adressereserve'}}) }}
+       {{ form_widget(formReservEdit.adresseReserve) }}
+     </div>
+   </div>
+   <br>
+   {{ form_widget(formReservEdit.save, {'label':'Enregistrer','attr' : {'class' : 'btn btn-warning'}}) }}
+   {{ form_end(formReservEdit) }}
+{% endblock %}
+
+    
